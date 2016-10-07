@@ -28,11 +28,12 @@ def process_json_data(json_data):
 	"""
 	dict = {}
 	current_cond = json_data['vt1observation']
-	return (current_cond['phrase'] + "\n" 
-		+ "Humidity: " + str(current_cond['humidity']) + "%\n" 
-		+ "Wind Speed: " + str(current_cond['windSpeed']) + "km/h\n"
-		+ "Temperature: " + str(current_cond['temperature']) + "^C\n" 
-		+ "UV: " + str(current_cond['uvIndex']) + "/10 " + current_cond['uvDescription'] + "\n")
+	return "{}\nHumidity: {}%\nWind Speed: {}km/h\nTemperature: {}^C\nUV: {}"\
+			"/10 {}".format(
+				current_cond['phrase'], current_cond['humidity'],
+				current_cond['windSpeed'], current_cond['temperature'],
+				current_cond['uvIndex'], current_cond['uvDescription']
+				)
 
 def process_http_request(location_name):
 
