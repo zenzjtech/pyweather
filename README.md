@@ -11,15 +11,18 @@ Cloning git repo:
 	
 	$ git clone https://github.com/fluteguitar/pyweather.git
 
-Install requirements:
+Installing requirements:
 
 	$ pip install requirements.txt
 
 ## Usage
 
 Help:
+	
 	$ python pyweather.py -h
+
 or,
+	
 	$ python pyweather.py -help
 
 Input with data from arguments:
@@ -50,6 +53,7 @@ Input with data from arguments:
 		Unavailable Location
 
 Input with data from text file:
+	
 	$ python weather.py -i sample_location.txt
 	NewYork
 
